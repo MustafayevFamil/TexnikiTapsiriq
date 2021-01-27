@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W6I-9V-JG3">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mark Sacca-->
+        <scene sceneID="SDB-ra-05A">
+            <objects>
+                <viewController id="IIg-p3-XNs" customClass="CollectionViewController" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SMG-RZ-dbA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jvf-JY-CKL">
+                                <rect key="frame" x="10" y="823" width="394" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4D6-hU-Bf1">
+                                        <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="52"/>
+                                        <state key="normal" image="photo"/>
+                                        <connections>
+                                            <action selector="photoButton:" destination="Vbm-ix-Xzw" eventType="touchUpInside" id="7RT-58-Mka"/>
+                                            <action selector="photoButton:" destination="IIg-p3-XNs" eventType="touchUpInside" id="xyh-EN-VZJ"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start typing ..." minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Aow-8Q-VXD">
+                                        <rect key="frame" x="58.666666666666657" y="0.0" width="276.66666666666674" height="52"/>
+                                        <color key="backgroundColor" red="0.88291567559999995" green="0.88301521540000005" blue="0.88285821679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="EDt-Nb-uW9"/>
+                                            <constraint firstAttribute="height" constant="52" id="i3K-bF-653"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkT-KY-5gO">
+                                        <rect key="frame" x="335.33333333333331" y="0.0" width="58.666666666666686" height="52"/>
+                                        <state key="normal" image="send"/>
+                                        <connections>
+                                            <action selector="sendButton:" destination="Vbm-ix-Xzw" eventType="touchUpInside" id="Kdb-kn-Aiu"/>
+                                            <action selector="sendButton:" destination="IIg-p3-XNs" eventType="touchUpInside" id="xqM-a3-311"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wfr-NZ-ITg">
+                                <rect key="frame" x="0.0" y="122" width="414" height="701"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellCollection" rowHeight="242" id="Nh7-Sj-8AZ" customClass="ColectionCell" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="242"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nh7-Sj-8AZ" id="P9T-BR-bHz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chloe" translatesAutoresizingMaskIntoConstraints="NO" id="z52-g3-xsd" customClass="ImageExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="134" width="40" height="40"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jonathan" translatesAutoresizingMaskIntoConstraints="NO" id="7QL-va-Iwg" customClass="ImageExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="68" y="11" width="204" height="154"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="204" id="TZU-hL-J1E"/>
+                                                        <constraint firstAttribute="height" constant="154" id="dug-5b-dA1"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yib-5z-og8" customClass="RightLabelExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="146" y="172" width="200" height="65"/>
+                                                    <color key="backgroundColor" red="0.4632875919342041" green="0.57780188322067261" blue="0.96845763921737671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="lLA-sa-ekK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3an-Dy-RRY" customClass="LabelExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="70" y="11" width="200" height="153"/>
+                                                    <color key="backgroundColor" red="0.87968701124191284" green="0.87978631258010864" blue="0.87962979078292847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chloe" translatesAutoresizingMaskIntoConstraints="NO" id="Ecw-7a-Ac4" customClass="ImageExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="354" y="197" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="uGM-7L-RGz"/>
+                                                        <constraint firstAttribute="width" constant="40" id="whM-El-Bsd"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7QL-va-Iwg" firstAttribute="centerX" secondItem="3an-Dy-RRY" secondAttribute="centerX" id="2bi-ia-fwk"/>
+                                                <constraint firstItem="3an-Dy-RRY" firstAttribute="leading" secondItem="z52-g3-xsd" secondAttribute="trailing" constant="10" id="3hz-rV-8ie"/>
+                                                <constraint firstItem="z52-g3-xsd" firstAttribute="top" secondItem="P9T-BR-bHz" secondAttribute="topMargin" constant="123" id="83W-Cz-QRy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="z52-g3-xsd" secondAttribute="bottom" constant="57" id="J5Q-dE-QZy"/>
+                                                <constraint firstItem="Ecw-7a-Ac4" firstAttribute="trailing" secondItem="P9T-BR-bHz" secondAttribute="trailingMargin" id="KXH-mH-axq"/>
+                                                <constraint firstItem="Ecw-7a-Ac4" firstAttribute="leading" secondItem="Yib-5z-og8" secondAttribute="trailing" constant="8" symbolic="YES" id="MfZ-sI-Wbl"/>
+                                                <constraint firstItem="Yib-5z-og8" firstAttribute="top" secondItem="7QL-va-Iwg" secondAttribute="bottom" constant="7" id="OfJ-yl-u5k"/>
+                                                <constraint firstItem="3an-Dy-RRY" firstAttribute="top" secondItem="P9T-BR-bHz" secondAttribute="topMargin" id="T86-Hy-cWS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ecw-7a-Ac4" secondAttribute="bottom" constant="-6" id="VD5-Cs-8h6"/>
+                                                <constraint firstItem="7QL-va-Iwg" firstAttribute="leading" secondItem="z52-g3-xsd" secondAttribute="trailing" constant="8" symbolic="YES" id="Yz7-KN-fuc"/>
+                                                <constraint firstItem="Yib-5z-og8" firstAttribute="top" secondItem="3an-Dy-RRY" secondAttribute="bottom" constant="8" symbolic="YES" id="f4l-sv-c8c"/>
+                                                <constraint firstItem="7QL-va-Iwg" firstAttribute="top" secondItem="P9T-BR-bHz" secondAttribute="top" constant="11" id="gJ2-Mp-jmp"/>
+                                                <constraint firstItem="Ecw-7a-Ac4" firstAttribute="bottom" secondItem="Yib-5z-og8" secondAttribute="bottom" id="gVs-7Y-Ehm"/>
+                                                <constraint firstItem="7QL-va-Iwg" firstAttribute="leading" secondItem="P9T-BR-bHz" secondAttribute="leading" constant="68" id="iJ6-lG-fAy"/>
+                                                <constraint firstItem="z52-g3-xsd" firstAttribute="leading" secondItem="P9T-BR-bHz" secondAttribute="leadingMargin" id="xz0-Cf-pXX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageCollectionCell" destination="7QL-va-Iwg" id="wXp-os-p5n"/>
+                                            <outlet property="sendSmsLabel" destination="Yib-5z-og8" id="ikb-tx-aPb"/>
+                                            <outlet property="sendSmsUserImage" destination="Ecw-7a-Ac4" id="RmF-1L-M2l"/>
+                                            <outlet property="smsLabel" destination="3an-Dy-RRY" id="J8p-Gu-GDy"/>
+                                            <outlet property="userImage" destination="z52-g3-xsd" id="jBh-Lq-5Nr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IIg-p3-XNs" id="VzR-o6-wzJ"/>
+                                    <outlet property="delegate" destination="IIg-p3-XNs" id="s2Q-Vf-TMg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wfr-NZ-ITg" firstAttribute="leading" secondItem="f55-ww-z8I" secondAttribute="leading" id="AMS-zf-Gkx"/>
+                            <constraint firstItem="jvf-JY-CKL" firstAttribute="top" secondItem="wfr-NZ-ITg" secondAttribute="bottom" id="Dym-h7-iK3"/>
+                            <constraint firstItem="f55-ww-z8I" firstAttribute="trailing" secondItem="wfr-NZ-ITg" secondAttribute="trailing" id="Eng-WW-Ebu"/>
+                            <constraint firstAttribute="bottom" secondItem="jvf-JY-CKL" secondAttribute="bottom" constant="21" id="Uc5-1l-vfm"/>
+                            <constraint firstItem="wfr-NZ-ITg" firstAttribute="top" secondItem="f55-ww-z8I" secondAttribute="top" id="et2-bN-9HY"/>
+                            <constraint firstItem="f55-ww-z8I" firstAttribute="trailing" secondItem="jvf-JY-CKL" secondAttribute="trailing" constant="10" id="eub-26-46Q"/>
+                            <constraint firstItem="jvf-JY-CKL" firstAttribute="leading" secondItem="f55-ww-z8I" secondAttribute="leading" constant="10" id="fCq-C8-4GH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f55-ww-z8I"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mark Sacca" prompt="Active now" id="1wl-xa-Fkz"/>
+                    <connections>
+                        <outlet property="tableView" destination="wfr-NZ-ITg" id="XCv-ew-ahV"/>
+                        <outlet property="textField" destination="Aow-8Q-VXD" id="wwf-fi-5cY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcR-T0-gUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2630.434782608696" y="-165.40178571428569"/>
+        </scene>
+        <!--Conversations-->
+        <scene sceneID="QRe-nT-iwc">
+            <objects>
+                <tableViewController storyboardIdentifier="tableViewController" id="Mca-Su-dD4" customClass="TableViewController" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K1t-QA-mcP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Seacrh for friends" id="0NK-JV-MCC">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <offsetWrapper key="searchTextPositionAdjustment" horizontal="10" vertical="0.0"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="1eo-8Z-vp1" customClass="TableViewCell" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1eo-8Z-vp1" id="Q7R-J8-5HN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jzt-0y-Phq">
+                                            <rect key="frame" x="10" y="0.0" width="394" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dC7-bh-OgU">
+                                                <size key="itemSize" width="70" height="80"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="5" minY="10" maxX="15" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="LoM-pT-d40" customClass="CollectionViewCell" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="5" y="15" width="70" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="80"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Mark" translatesAutoresizingMaskIntoConstraints="NO" id="udk-DT-out" customClass="ImageExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                                <rect key="frame" x="10" y="0.0" width="50" height="50"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                                        <real key="value" value="50"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mQD-bg-KDg">
+                                                                <rect key="frame" x="0.0" y="60" width="70" height="13"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="13" id="Vcr-Gn-Qg4"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </view>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="udk-DT-out" firstAttribute="leading" secondItem="LoM-pT-d40" secondAttribute="leading" constant="10" id="7ic-KY-gk8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="mQD-bg-KDg" secondAttribute="bottom" constant="7" id="Gac-Il-npH"/>
+                                                        <constraint firstItem="udk-DT-out" firstAttribute="trailing" secondItem="mQD-bg-KDg" secondAttribute="trailing" constant="-10" id="awe-KA-PPH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="udk-DT-out" secondAttribute="trailing" constant="10" id="hJE-sW-1Le"/>
+                                                        <constraint firstItem="mQD-bg-KDg" firstAttribute="top" secondItem="udk-DT-out" secondAttribute="bottom" constant="10" id="iKh-c7-qiu"/>
+                                                        <constraint firstItem="udk-DT-out" firstAttribute="leading" secondItem="mQD-bg-KDg" secondAttribute="leading" constant="10" id="jD8-F0-pVI"/>
+                                                        <constraint firstItem="udk-DT-out" firstAttribute="top" secondItem="LoM-pT-d40" secondAttribute="top" id="nkf-bg-tyd"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="imageViewCollectionCell" destination="udk-DT-out" id="8FF-yx-uoV"/>
+                                                        <outlet property="nameLabelCollectionCell" destination="mQD-bg-KDg" id="mvs-3U-KyD"/>
+                                                        <segue destination="IIg-p3-XNs" kind="show" id="9X4-1X-1zi"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jzt-0y-Phq" firstAttribute="leading" secondItem="Q7R-J8-5HN" secondAttribute="leading" constant="10" id="2t8-th-53B"/>
+                                        <constraint firstAttribute="bottom" secondItem="jzt-0y-Phq" secondAttribute="bottom" id="4CJ-P7-s8t"/>
+                                        <constraint firstItem="jzt-0y-Phq" firstAttribute="leading" secondItem="Q7R-J8-5HN" secondAttribute="leading" constant="10" id="59L-Sa-716"/>
+                                        <constraint firstAttribute="bottom" secondItem="jzt-0y-Phq" secondAttribute="bottom" id="9Zl-Di-r9K"/>
+                                        <constraint firstAttribute="trailing" secondItem="jzt-0y-Phq" secondAttribute="trailing" constant="10" id="BxY-9L-J11"/>
+                                        <constraint firstItem="jzt-0y-Phq" firstAttribute="leading" secondItem="Q7R-J8-5HN" secondAttribute="leading" constant="10" id="MgA-WX-uAp"/>
+                                        <constraint firstItem="jzt-0y-Phq" firstAttribute="top" secondItem="Q7R-J8-5HN" secondAttribute="top" id="izF-fv-KIB"/>
+                                        <constraint firstItem="jzt-0y-Phq" firstAttribute="top" secondItem="Q7R-J8-5HN" secondAttribute="top" id="j4Y-JT-XDq"/>
+                                        <constraint firstItem="jzt-0y-Phq" firstAttribute="top" secondItem="Q7R-J8-5HN" secondAttribute="top" id="lhZ-XR-OJC"/>
+                                        <constraint firstAttribute="trailing" secondItem="jzt-0y-Phq" secondAttribute="trailing" constant="10" id="p80-yb-ZGV"/>
+                                        <constraint firstAttribute="trailing" secondItem="jzt-0y-Phq" secondAttribute="trailing" constant="10" id="rS5-wP-liP"/>
+                                        <constraint firstAttribute="bottom" secondItem="jzt-0y-Phq" secondAttribute="bottom" id="wYl-ZM-9AD"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="59L-Sa-716"/>
+                                            <exclude reference="9Zl-Di-r9K"/>
+                                            <exclude reference="BxY-9L-J11"/>
+                                            <exclude reference="MgA-WX-uAp"/>
+                                            <exclude reference="j4Y-JT-XDq"/>
+                                            <exclude reference="lhZ-XR-OJC"/>
+                                            <exclude reference="rS5-wP-liP"/>
+                                            <exclude reference="wYl-ZM-9AD"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact-widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="9Zl-Di-r9K"/>
+                                            <include reference="BxY-9L-J11"/>
+                                            <include reference="MgA-WX-uAp"/>
+                                            <include reference="j4Y-JT-XDq"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact-widthClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="59L-Sa-716"/>
+                                            <include reference="lhZ-XR-OJC"/>
+                                            <include reference="rS5-wP-liP"/>
+                                            <include reference="wYl-ZM-9AD"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="jzt-0y-Phq" id="5t8-va-Vtg"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellSecond" rowHeight="80" id="0bH-D0-zMu" customClass="SecondTableViewCell" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="172" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0bH-D0-zMu" id="M42-gQ-6X4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="waT-cH-utD">
+                                            <rect key="frame" x="10" y="5" width="394" height="70"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jonathan" translatesAutoresizingMaskIntoConstraints="NO" id="4pz-Q9-F6y" customClass="ImageExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="GZx-TN-uro"/>
+                                                        <constraint firstAttribute="height" constant="70" id="U7a-7t-psj"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r94-5L-lCm">
+                                                    <rect key="frame" x="90" y="0.0" width="304" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SkB-wF-dGS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="22.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messaje" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.34999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="yjj-zx-4nI">
+                                                            <rect key="frame" x="0.0" y="27.666666666666664" width="304" height="22.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="r94-5L-lCm" secondAttribute="bottom" constant="20" id="jFG-47-YRw"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="waT-cH-utD" secondAttribute="bottom" constant="5" id="3pq-ss-2LK"/>
+                                        <constraint firstItem="waT-cH-utD" firstAttribute="top" secondItem="M42-gQ-6X4" secondAttribute="top" constant="5" id="DQK-V9-MdD"/>
+                                        <constraint firstAttribute="trailing" secondItem="waT-cH-utD" secondAttribute="trailing" constant="10" id="Ig2-6F-BxK"/>
+                                        <constraint firstItem="waT-cH-utD" firstAttribute="leading" secondItem="M42-gQ-6X4" secondAttribute="leading" constant="10" id="oXy-of-ncE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageViewSecond" destination="4pz-Q9-F6y" id="8Dd-xE-dJt"/>
+                                    <outlet property="messajeLabel" destination="yjj-zx-4nI" id="R5l-Qh-Bb7"/>
+                                    <outlet property="usernameLabel" destination="SkB-wF-dGS" id="Qmp-i1-c2p"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mca-Su-dD4" id="vJJ-dT-Xlf"/>
+                            <outlet property="delegate" destination="Mca-Su-dD4" id="gJB-bb-op5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Conversations" id="DzK-vp-Q74"/>
+                    <connections>
+                        <outlet property="newSearchBar" destination="0NK-JV-MCC" id="dP5-Pj-3pt"/>
+                        <segue destination="Vbm-ix-Xzw" kind="show" identifier="segue" id="C5k-yL-cTE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FP-rk-BI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839.1304347826087" y="141.96428571428569"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="qJw-Pd-ryM">
+            <objects>
+                <viewController storyboardIdentifier="chatViewController" id="Vbm-ix-Xzw" customClass="ChatViewController" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LCL-5a-aPe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5F-Le-Rao">
+                                <rect key="frame" x="0.0" y="88" width="414" height="738"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell" rowHeight="151" id="Xj9-Nb-BBs" customClass="ChatTableViewCell" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="151"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xj9-Nb-BBs" id="0Iz-zU-Ny6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="RmY-gz-QVB" customClass="LabelExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="68" y="4" width="200" height="65"/>
+                                                    <color key="backgroundColor" red="0.86673510074615479" green="0.8668329119682312" blue="0.86667865514755249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="KI5-I2-XCH"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="990" constant="59" id="WvK-R4-0Ur"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download-3" translatesAutoresizingMaskIntoConstraints="NO" id="e4V-GU-UPh" customClass="ImageExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="33" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="83g-Lw-c5x"/>
+                                                        <constraint firstAttribute="width" constant="40" id="xRc-BM-ZYw"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download-3" translatesAutoresizingMaskIntoConstraints="NO" id="18B-Fa-58w" customClass="ImageExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="351" y="102" width="40" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="962-o9-uHJ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="t48-Db-qEy" customClass="RightLabelExtension" customModule="RabiteBank_Texniki_Tapsiriq" customModuleProvider="target">
+                                                    <rect key="frame" x="143" y="77" width="200" height="65"/>
+                                                    <color key="backgroundColor" red="0.4632875919342041" green="0.57780188322067261" blue="0.96845763921737671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="COi-aF-ATK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RmY-gz-QVB" firstAttribute="leading" secondItem="e4V-GU-UPh" secondAttribute="trailing" constant="8" id="6Ks-hd-Dr6"/>
+                                                <constraint firstItem="18B-Fa-58w" firstAttribute="top" secondItem="RmY-gz-QVB" secondAttribute="bottom" constant="33" id="Cdc-n5-OWq"/>
+                                                <constraint firstItem="18B-Fa-58w" firstAttribute="leading" secondItem="t48-Db-qEy" secondAttribute="trailing" constant="8" id="DUL-JW-nXN"/>
+                                                <constraint firstItem="t48-Db-qEy" firstAttribute="leading" secondItem="e4V-GU-UPh" secondAttribute="leading" constant="123" id="FQc-gL-tKm"/>
+                                                <constraint firstAttribute="trailing" secondItem="RmY-gz-QVB" secondAttribute="trailing" constant="146" id="Fsm-RV-TOC"/>
+                                                <constraint firstAttribute="bottom" secondItem="RmY-gz-QVB" secondAttribute="bottom" constant="82" id="Rwt-pN-hjN"/>
+                                                <constraint firstItem="18B-Fa-58w" firstAttribute="trailing" secondItem="RmY-gz-QVB" secondAttribute="trailing" constant="123" id="amy-vJ-QJu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="t48-Db-qEy" secondAttribute="bottom" constant="-2" id="cBZ-sG-6uk"/>
+                                                <constraint firstItem="RmY-gz-QVB" firstAttribute="top" secondItem="0Iz-zU-Ny6" secondAttribute="top" constant="4" id="clD-JB-VtB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="18B-Fa-58w" secondAttribute="bottom" constant="-6" id="h5n-2P-jD3"/>
+                                                <constraint firstAttribute="bottom" secondItem="e4V-GU-UPh" secondAttribute="bottom" constant="78" id="qzQ-ck-75M"/>
+                                                <constraint firstItem="e4V-GU-UPh" firstAttribute="leading" secondItem="0Iz-zU-Ny6" secondAttribute="leading" constant="20" id="rMM-A6-WtS"/>
+                                                <constraint firstItem="t48-Db-qEy" firstAttribute="top" secondItem="e4V-GU-UPh" secondAttribute="bottom" constant="4" id="u5c-Cz-16q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewChat" destination="e4V-GU-UPh" id="8M3-Ct-FsV"/>
+                                            <outlet property="imageViewMessaje" destination="18B-Fa-58w" id="0lX-lg-8in"/>
+                                            <outlet property="labelChat" destination="RmY-gz-QVB" id="qmh-fz-Bq8"/>
+                                            <outlet property="messajeLabel" destination="t48-Db-qEy" id="wJx-v5-Zco"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vbm-ix-Xzw" id="u6S-2Z-MdL"/>
+                                    <outlet property="delegate" destination="Vbm-ix-Xzw" id="nkt-QZ-hUs"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="tXW-Qe-Ws4">
+                                <rect key="frame" x="10" y="825" width="394" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-PB-IFA">
+                                        <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="52"/>
+                                        <state key="normal" image="photo"/>
+                                        <connections>
+                                            <action selector="photoButton:" destination="Vbm-ix-Xzw" eventType="touchUpInside" id="IgZ-VU-TQt"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start typing ..." minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wWG-c4-OdF">
+                                        <rect key="frame" x="58.666666666666657" y="0.0" width="276.66666666666674" height="52"/>
+                                        <color key="backgroundColor" red="0.88291567559999995" green="0.88301521540000005" blue="0.88285821679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="2A6-ol-ZeC"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="5hi-cc-3YQ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1o-e5-fqq">
+                                        <rect key="frame" x="335.33333333333331" y="0.0" width="58.666666666666686" height="52"/>
+                                        <state key="normal" image="send"/>
+                                        <connections>
+                                            <action selector="sendButton:" destination="Vbm-ix-Xzw" eventType="touchUpInside" id="nmX-xH-6W5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tXW-Qe-Ws4" firstAttribute="leading" secondItem="rVO-Sd-sb1" secondAttribute="leading" constant="20" id="NYf-Ah-uil"/>
+                            <constraint firstItem="d5F-Le-Rao" firstAttribute="top" secondItem="rVO-Sd-sb1" secondAttribute="top" id="cZJ-si-L7g"/>
+                            <constraint firstItem="d5F-Le-Rao" firstAttribute="leading" secondItem="LCL-5a-aPe" secondAttribute="leading" id="eIx-Wl-Hbq"/>
+                            <constraint firstItem="tXW-Qe-Ws4" firstAttribute="bottom" secondItem="rVO-Sd-sb1" secondAttribute="bottom" constant="15" id="gX2-UU-8fC"/>
+                            <constraint firstItem="rVO-Sd-sb1" firstAttribute="bottom" secondItem="d5F-Le-Rao" secondAttribute="bottom" constant="36" id="kTM-RW-PiZ"/>
+                            <constraint firstItem="tXW-Qe-Ws4" firstAttribute="leading" secondItem="rVO-Sd-sb1" secondAttribute="leading" constant="10" id="mEx-cb-ZZw"/>
+                            <constraint firstItem="rVO-Sd-sb1" firstAttribute="trailing" secondItem="tXW-Qe-Ws4" secondAttribute="trailing" constant="10" id="oWO-wM-MqM"/>
+                            <constraint firstItem="d5F-Le-Rao" firstAttribute="centerX" secondItem="tXW-Qe-Ws4" secondAttribute="centerX" id="x7g-h7-dD6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rVO-Sd-sb1"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oWO-wM-MqM"/>
+                                <exclude reference="gX2-UU-8fC"/>
+                                <exclude reference="mEx-cb-ZZw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="oWO-wM-MqM"/>
+                                <exclude reference="NYf-Ah-uil"/>
+                                <include reference="gX2-UU-8fC"/>
+                                <include reference="mEx-cb-ZZw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="d5F-Le-Rao" id="Z82-Lr-ehz"/>
+                        <outlet property="textField" destination="wWG-c4-OdF" id="BVP-xa-zvL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WfT-c8-HZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2630.434782608696" y="493.52678571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZIB-O8-iRk">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="W6I-9V-JG3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.5" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="4iq-fr-utK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.24415704607963562" green="0.39892047643661499" blue="0.77227354049682617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.24415704607963562" green="0.39892047643661499" blue="0.77227354049682617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mca-Su-dD4" kind="relationship" relationship="rootViewController" id="djr-7S-eIP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YAg-bt-6pj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="141.96428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Chloe" width="242" height="208"/>
+        <image name="Jonathan" width="275" height="183"/>
+        <image name="Mark" width="200" height="252"/>
+        <image name="download-3" width="259" height="194"/>
+        <image name="photo" width="30" height="30"/>
+        <image name="send" width="30" height="30"/>
+    </resources>
+</document>
